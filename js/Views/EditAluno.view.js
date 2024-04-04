@@ -1,14 +1,15 @@
 class EditAlunoView{
 
-    constructor(container, materias){
+    constructor(form, materias){
         // this.render()
-        this.container = container
+        this.form = form
+        this.container = form.querySelector("[data-edit-notas]")
         this.materias = materias
 
     }
 
     render(aluno){
-
+ 
         const html = this.materias.map( materia =>
 
           `
@@ -28,7 +29,7 @@ class EditAlunoView{
           <div class="input-field col s2">
             <input
               id="nota_materia_1"
-              type="text"
+              type="number"
               class="validate"
             />
           </div>
@@ -36,7 +37,7 @@ class EditAlunoView{
           <div class="input-field col s2">
             <input
               id="nota_materia_2"
-              type="text"
+              type="number"
               class="validate"
             />
           </div>
@@ -44,7 +45,7 @@ class EditAlunoView{
           <div class="input-field col s2">
             <input
               id="nota_materia_3"
-              type="text"
+              type="number"
               class="validate"
             />
           </div>
@@ -52,7 +53,7 @@ class EditAlunoView{
           <div class="input-field col s2">
             <input
               id="nota_materia_4"
-              type="text"
+              type="number"
               class="validate"
             />
           </div>

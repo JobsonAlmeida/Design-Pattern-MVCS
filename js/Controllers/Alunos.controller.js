@@ -9,6 +9,7 @@ class AlunosController{
         this.service.add(new AlunoModel(aluno))
         this.view.render(this.service.alunos)
     }
+
 }
 
  
