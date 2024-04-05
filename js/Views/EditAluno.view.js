@@ -32,7 +32,7 @@ class EditAlunoView{
               id="nota_${materia}_0"
               type="number"
               class="validate"
-              value="${aluno.notas[materia][0]}"
+              value="${aluno.notas[materia]?.[0]}"
             />
           </div>
   
@@ -41,7 +41,7 @@ class EditAlunoView{
               id="nota_${materia}_1"
               type="number"
               class="validate"
-              value="${aluno.notas[materia][1]}"
+              value="${aluno.notas[materia]?.[1]}"
             />
           </div>
   
@@ -50,7 +50,7 @@ class EditAlunoView{
               id="nota_${materia}_2"
               type="number"
               class="validate"
-              value="${aluno.notas[materia][2]}"
+              value="${aluno.notas[materia]?.[2]}"
             />
           </div>
   
@@ -59,7 +59,7 @@ class EditAlunoView{
               id="nota_${materia}_3"
               type="number"
               class="validate"
-              value="${aluno.notas[materia][3]}"
+              value="${aluno.notas[materia]?.[3]}"
             />
           </div>
   
