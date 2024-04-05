@@ -13,11 +13,10 @@ class EditAlunoView{
         const html = this.materias.map( materia =>
 
           `
-        
-          <div class="row">        
+          <div class="row" data-materia="${materia}">        
   
           <div class="input-field col s4">
-            <input
+            <input 
               id="materia_${materia}"
               type="text"
               class="validate"
@@ -27,39 +26,38 @@ class EditAlunoView{
           </div>
   
           <div class="input-field col s2">
-            <input
-              id="nota_materia_1"
+            <input data-trimestre="0"
+              id="nota_${materia}_0"
               type="number"
               class="validate"
             />
           </div>
   
           <div class="input-field col s2">
-            <input
-              id="nota_materia_2"
+            <input data-trimestre="1"
+              id="nota_${materia}_1"
               type="number"
               class="validate"
             />
           </div>
   
           <div class="input-field col s2">
-            <input
-              id="nota_materia_3"
+            <input data-trimestre="2"
+              id="nota_${materia}_2"
               type="number"
               class="validate"
             />
           </div>
   
           <div class="input-field col s2">
-            <input
-              id="nota_materia_4"
+            <input data-trimestre="3"
+              id="nota_${materia}_3"
               type="number"
               class="validate"
             />
           </div>
   
         </div> 
-          
           `
 
         ).join("")

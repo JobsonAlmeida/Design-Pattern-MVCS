@@ -56,8 +56,6 @@ class AlunosView{
                 </td>`
             }
 
-          
-        
             htmlBody.innerHTML = htmlMedias
         
             this.tableBody.appendChild(htmlBody)

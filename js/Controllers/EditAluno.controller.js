@@ -20,8 +20,25 @@ class EditAlunoController{
         //     }
         // }
 
-        const notas = {}
+        const notas = {} 
+        const abc = this.view.container.querySelectorAll("[data-materia]")
+        console.log(abc)
+        console.log(typeof abc)
+        const materiasRow = Array.from(abc)
+        console.log(materiasRow)
+        console.log(materiasRow)
 
-        this.service.edit(aluno, notas)
+        materiasRow.forEach(row => {
+            const notasRow = Array.from(row.querySelectorAll("[data-trimestre]"))
+            console.log(notasRow)
+
+            notas[row.getAttribute("data-materia")] = notasRow.map(nota => parseFloat(nota.value) || 0 )
+
+        })
+
+        console.log(notas)
+        
+
+        this.service.edit(aluno, notas)  
     }
 }
