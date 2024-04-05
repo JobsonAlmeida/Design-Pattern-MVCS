@@ -9,6 +9,8 @@ class EditAlunoView{
     }
 
     render(aluno){
+
+      console.log("aluno", aluno.notas)
  
         const html = this.materias.map( materia =>
 
@@ -30,6 +32,7 @@ class EditAlunoView{
               id="nota_${materia}_0"
               type="number"
               class="validate"
+              value="${aluno.notas[materia][0]}"
             />
           </div>
   
@@ -38,6 +41,7 @@ class EditAlunoView{
               id="nota_${materia}_1"
               type="number"
               class="validate"
+              value="${aluno.notas[materia][1]}"
             />
           </div>
   
@@ -46,6 +50,7 @@ class EditAlunoView{
               id="nota_${materia}_2"
               type="number"
               class="validate"
+              value="${aluno.notas[materia][2]}"
             />
           </div>
   
@@ -54,6 +59,7 @@ class EditAlunoView{
               id="nota_${materia}_3"
               type="number"
               class="validate"
+              value="${aluno.notas[materia][3]}"
             />
           </div>
   

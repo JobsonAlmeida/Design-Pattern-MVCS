@@ -9,17 +9,6 @@ class EditAlunoController{
     edit(aluno, nome){
         aluno.nome = nome
 
-        // {
-        //     _id: 0,
-        //     nome: "chico melato",
-        //     notas: {
-        //     portugues: [1, 1, 2, 2],
-        //     matematica: [2, 2, 2, 2],
-        //     historia: [5, 5, 5, 5],
-        //     ciencias: [3, 3, 3, 3],
-        //     }
-        // }
-
         const notas = {} 
         const abc = this.view.container.querySelectorAll("[data-materia]")
         console.log(abc)
@@ -37,8 +26,9 @@ class EditAlunoController{
         })
 
         console.log(notas)
+        aluno.notas = notas
         
 
-        this.service.edit(aluno, notas)  
+        this.service.edit(aluno)  
     }
 }

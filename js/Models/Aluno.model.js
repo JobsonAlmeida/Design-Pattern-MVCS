@@ -14,14 +14,19 @@ class AlunoModel{
 
         this.media = {} 
 
-        for(let materia in this.notas){        
-            this.media[materia] = avarege(...this.notas[materia])
-        }
+       this.generateAvarage()
  
     }
 
     generateId(){
         return AlunoModel.maxId + 1
+    }
+
+    generateAvarage(){
+
+        for(let materia in this.notas){        
+            this.media[materia] = avarege(...this.notas[materia])
+        }
     }
 }
 
