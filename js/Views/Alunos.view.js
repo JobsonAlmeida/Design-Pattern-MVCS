@@ -13,7 +13,7 @@ class AlunosView{
     renderHeader(){
 
         let htmlHeader = document.createElement("tr")
-        htmlHeader.innerHTML = "<td>Nome</td>"
+        htmlHeader.innerHTML = `<td>Nome</td>`
         
         const htmlHeaderMaterias = this.materias.map(materia => {
             return "<td>" + materia + "</td>"
@@ -28,9 +28,9 @@ class AlunosView{
     render(alunos){
         this.tableBody.innerHTML = ""  
 
-        alunos.forEach(aluno => {
+        alunos.forEach( (aluno, index) => {
             const htmlBody = document.createElement("tr")
-            let htmlMedias = `<td>${aluno.nome}</td>`
+            let htmlMedias = `<td><a href="edit.html?id=${aluno._id}">${aluno.nome}</a></td>`
             let encontrado = false
 
             this.materias.forEach(materia => {
