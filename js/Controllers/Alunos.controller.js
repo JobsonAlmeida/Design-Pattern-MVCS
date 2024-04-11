@@ -10,6 +10,11 @@ class AlunosController{
         this.view.render(this.service.alunos)
     }
 
+    search(name){
+        const data = this.service.search(name)
+        this.view.render(data)
+    }
+
 }
 
  
