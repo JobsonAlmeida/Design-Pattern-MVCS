@@ -1,4 +1,4 @@
-class AlunosController{
+export class AlunosController{
     constructor(service, view){
         view.render(service.alunos)
         this.view = view
