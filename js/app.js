@@ -46,7 +46,7 @@ document.querySelector("form").addEventListener("submit", e =>{
 document.querySelector("#search_name").addEventListener("input", function(){ 
     const name = this.value
     sessionStorage.setItem("search", name)
-
+  
     if(name.length > 2 || name.length === 0){
         alunosController.search(name)
     }
@@ -61,6 +61,23 @@ document.querySelector("#search_name").addEventListener("input", function(){
 const inputEvent_IE = document.createEvent("Event") //this is an old way to create an Event. 
 inputEvent_IE.initEvent("input", true, true)
 console.log(inputEvent_IE)
+
+if(sessionStorage.getItem("search")){
+    document.querySelector("#search_name").value = sessionStorage.getItem("search")
+    // document.querySelector("#search_name").dispatchEvent(inputEvent)
+    document.querySelector("#search_name").dispatchEvent(inputEvent_IE)
+    
+}
+
+
+
+} )
+
+
+// const inputEvent = new Event("input") //this is a new way to create an Event
+
+const inputEvent_IE = document.createEvent("Event") //this is an old way to create an Event. 
+inputEvent_IE.initEvent("input", true, true)
 
 if(sessionStorage.getItem("search")){
     document.querySelector("#search_name").value = sessionStorage.getItem("search")
